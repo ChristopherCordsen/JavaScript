@@ -42,3 +42,10 @@ function fixed_Method() {
     var n = num.toFixed(2);
     document.getElementById("Fixed").innerHTML = n;
   }
+
+  function valueFunction() {
+    var str = "Hey You!";
+    var res = str.valueOf();
+    document.getElementById("Hey").innerHTML = res;
+  }
+ 

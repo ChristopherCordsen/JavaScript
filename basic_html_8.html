@@ -3,11 +3,17 @@
     <head>
         <title>Basic 8</title>
         <meta charset="utf-8">
-        <script src="js/basic_javascript_8.js"></script>
+        <script>
+        function valueFunction() {
+                var str = "Hey You!";
+                var res = str.valueOf();
+                document.getElementById("Hey").innerHTML = res;
+              }
+        </script>
     </head>
     <body>
         <p>This is Basic HTML 8</p>
-        <p id="Fixed"></p>
-        <button onclick="fixed_Method()">Click here for a sentence</button>
+        <p id="Hey"></p>
+        <button onclick="valueFunction()">Click here for a sentence</button>
     </body>
 </html>
