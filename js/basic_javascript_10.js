@@ -42,7 +42,7 @@ function constant_function() {
     Beebuts.type + " was " + Beebuts.price;
 }
 
-let car = {
+let car = { //I didn't quite get this, but got it to work through looking at previous lessions
     make: "Dodge ",
     model: "Viper ",
     year: "2021 ",

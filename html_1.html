@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HTML 1</title>
+        <meta charset="utf-8">
+        <script src="js/javascript_1.js"></script>
+    </head>
+    <body>
+        <h1>This is HTML 1 in JavaScript</h1>
+        <canvas id="myCanvas" width="300" height="150" style="border:3px solid #f5cf27;">
+                Your browser doesn't support the HTML5 canvas tag.</canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            var grd = ctx.createLinearGradient(0, 0, 170, 0);
+            grd.addColorStop(0, "black");
+            grd.addColorStop(0.5, "aqua");
+            grd.addColorStop(1, "white");
+            ctx.fillStyle = grd;
+            ctx.fillRect(20, 20, 150, 100);
+       </script>
+    </body>
+</html>
