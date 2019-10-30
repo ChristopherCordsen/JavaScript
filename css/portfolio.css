@@ -1,0 +1,445 @@
+/* Affects entire document - portfolio.html */
+html {
+  scroll-behavior: smooth;  
+}
+
+/* Body */
+body {
+	margin: 0%;  
+    opacity: 1;  
+    transition: 3s opacity;  
+	letter-spacing: .2vw;
+	font-family: 'Times New Roman', Times, serif; 
+	font-size: 1.5vw;
+	
+	}
+
+ 
+body.fade-out {
+    opacity: .1;  
+    transition: none;
+}
+
+/* Navbar */
+.Navbar {
+	overflow: hidden;  
+	background-color: black;  
+	position: fixed; 
+	top: 0;  
+	width: 100%;  
+	z-index: 1;  
+    position: fixed;
+	-webkit-animation: moveNav 5s;  
+    animation: moveNav 5s;
+}
+
+/* Navbar text */
+.Navbar a {
+	float: left;  
+	display: block;  
+	color:  rgb(56, 83, 114);  
+	padding: .75vw 1vw; 
+	text-decoration: none;  
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+	font-size: 1.5vw;  
+	text-align: center; 
+    position: relative;
+	-webkit-animation: movenavText 5.75s;  
+    animation: movenavText 5.75s;
+	letter-spacing: .2vw;
+}
+
+/* nav bar  animation */
+@keyframes moveNav {
+  from {left: -100vw;}
+  to {left: 0vw;}
+}
+
+ 
+@keyframes movenavText {
+  from {top: -100vw;}
+  to {top: 0vw;}
+}
+
+
+@keyframes movevideoText {
+  from {top: -100vw;}
+  to {top: 0px;}
+}
+
+/* Navbar hover effect */
+.Navbar a:hover {
+  background-color: rgb(56, 83, 114);  
+  color: black;  
+  font-weight: bold; 
+  cursor: pointer;
+  -webkit-transition-duration: 1s; 
+  transition-duration: 1s;
+}
+
+/* Navbar home button */
+.Navbar a.active {  
+  background-color: rgb(56, 83, 114));   
+}
+
+/*  video to zoom out from a zoomed in position upon page load */
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1.5,1.5);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+/* Video */
+#Typing_Video {
+	position: fixed;  
+	right: 0;  
+	bottom: 0;  
+	min-height: 100%;  
+	top: 0;
+	z-index: -1;
+	animation: zoominoutsinglefeatured 5s;
+}
+
+/* Text over the video */ 
+.Video_Text { 
+	background: rgba(0, 0, 0, 0.5);  
+	color: white; 
+	width: 100%;
+	padding-top: .1vh;  
+	padding-bottom: 1vh;
+	margin-top: 23%;
+    position: relative;
+	-webkit-animation: moveNav 4s; 
+    animation: movevideoText 4s;
+}
+
+/* Slideshow Styling */
+#Slideshow_Background {
+  background:rgba(150, 150, 151, 0.35);  
+  }
+
+
+.mySlides {
+	display: none;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Slideshow section  */
+#Slideshow_Container {
+  width: 39.5vw;
+  height: auto;
+  padding-top: 4%;
+  position: relative;
+  margin: auto;
+
+}
+
+/* Images contained within slideshow */
+.Slide_Show_Images {
+  vertical-align: middle;
+  height: auto;
+  box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+  width: auto;
+}
+
+
+/* Next and previous buttons */
+.Previous, .Next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 2vw;
+  margin-top: -0vw;
+  color: darkgray;
+  font-weight: bold;
+  font-size: 1.5vw;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  transition: 0.6s ease;
+}
+
+/* Positioning the right-hand */
+.Next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Hover effect  */
+.Previous:hover, .Next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* Slideshow text */
+.text {
+  color: white;
+  padding: 1vw;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Bold;
+  letter-spacing: .1vw; 
+  font-size: 1.5vw;
+  background-color: rgba(22, 11, 49, 0.75);
+  font-weight: bold;
+  border-radius: 7px 7px 7px 7px;
+}
+
+/* Number text (1/6, 2/6, etc.) in slide show*/
+.Slide_Number {
+  color: white;
+  position: absolute;
+  top: 0;
+  font-family: Perpetua, Rockwell Extra Bold;
+  letter-spacing: .1vw; 
+  font-size: 1.5vw;
+  font-weight: bold;
+  display: none;
+  }
+
+/* The dots under in slideshow */
+.dot {
+  cursor: pointer;
+  height: 1vw;
+  width: 1vw;
+  margin: .25vw;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover effect */ 
+.active, .dot:hover {
+  background-color: black;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;  
+}
+
+ 
+* {  
+	box-sizing: border-box;  
+}
+
+.Column_1 {
+	float: left;  
+	width: 50%; 
+	padding: 1.6%; 
+	background-color: rgb(76, 85, 97); 
+	height: 448px;  
+}
+
+.Column_2 {
+	float: left;
+	width: 50%;
+	padding: 1.6%;
+	height: 448px; 
+	background-color: #444444;
+}
+
+.Row:after { 
+    content: ""; 
+    display: table; 
+	clear: both;
+}
+
+/* Heading 1 elements */
+h1 {
+	text-transform: uppercase;
+	font-family: "sans-serif", Optima; 
+	text-align: center;
+	margin-top: 3%;  
+	color: #1a1a1a;
+}
+
+/* Paragraph elements */
+p {
+	font-family: sans-serif, Rockwell Extra Bold;
+	text-align: justify;
+	letter-spacing: .1vw;  
+	font-size: 1.5vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+
+/* Center align elements */
+center {
+	font-family: sans-serif, Rockwell Extra Bold;
+	text-align: center;
+	letter-spacing: .1vw;
+	font-size: 1.5vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+
+/* Anchor elements */
+a {
+	color: rgb(0, 0, 255); 
+}
+
+/* Quotation elements */
+q {
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* Image elements */
+img {
+	filter: grayscale(85%); /* This rids our pictures of 85% of their color */
+    border-radius: 10px;  
+    max-width: 100%; 
+	height: 100%;
+    margin: auto auto auto auto;
+	display: block;
+}
+
+/* Center align element for hover effect */
+center:hover {
+	transition: transform 2s;
+	transform: scale(1.1);
+}
+
+/* Paragraph element for hover effect */
+p:hover {
+	color: #00004d;	
+    transition: transform 1s;
+	transform: scale(1.01);
+}
+
+/* Heading 1 element for hover effect */
+h1:hover {
+	color: black;
+	font-weight: normal;  
+
+}
+
+/* Image element hover effects */
+img:hover {
+	filter: grayscale(9%);  /* Brings back image's color when hovered over */
+    transition: transform 2s;
+	transform: scale(1.1);
+}
+
+/* Contact form styling */
+
+/* Makes contact form button slide */
+@keyframes movePopup {
+  from {right: -40vw;}
+  to {bottom: 1.75vw;}
+}
+
+/* Button used to open the contact form */
+.Pop_Up_Button {
+  bottom: 1.75vw;
+  right: 1.75vw;
+  width: 25vw;  
+  background-color: white;
+  color: black;
+  border: solid;
+  cursor: pointer;
+  position: fixed;
+  -webkit-animation: movePopup 5s;
+  animation: movePopup 5s;
+}
+
+/* The popup form - hidden */
+.form-popup {
+  border: 3px solid #f0f1f0;
+  z-index: 8;
+  display: none;
+  position: fixed;
+  bottom: 6px;
+  right: 6px;
+}
+
+/* Form styling */
+.form-container {
+  max-width: 49vw;
+  padding: 9px;
+  background-color: white;
+}
+
+/* Input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: .93vw;
+  margin: .6vw 0 .6vw 0;
+  border: none;
+  background: rgb(219, 219, 219);
+  font-family: Helvetica, Avant Garde;
+  font-size: 1vw; 
+}
+
+/* Submit button */
+.form-container .btn {
+  background-color: white;
+  color: black;
+  border-color: black;
+  margin-bottom:1vh;
+}
+
+/* Close button */
+.form-container .cancel {
+  background-color: black;
+  color: white;
+  border-color: gray;
+}
+
+/* Button styling */
+button {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  letter-spacing: .3vw; 
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding: 1.5vw 1.5vw;
+  border-style: solid;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
+
+/* Hover effect for buttons */
+button:hover, .form-container .btn:hover{
+  color: white;
+  background-color:rgb(56, 83, 114);
+  -webkit-transition-duration: 1s; 
+  transition-duration: 1s;
+  border-style: solid;
+  border-color: silver;
+}
+.form-container .cancel:hover{
+  color: white;
+  background-color: rgb(56, 83, 114);
+  -webkit-transition-duration: 1.5s; 
+  transition-duration: 1s;
+  border-style: solid;
+  border-color: black;
+}	
+
+/* Footer element */
+footer {
+	padding: 5%;
+	background-color:rgb(233, 233, 233);
+}
